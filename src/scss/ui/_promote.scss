@@ -1,0 +1,42 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.promote-podcast {
+    background-color: v.$primario;
+    padding: 5rem 0;
+    .promote-grid {
+        display: flex;
+        flex-direction: column-reverse;
+        @include m.tablet {
+            @include m.grid(2, 2rem);
+            align-items: center;
+        }
+    }
+}
+
+.promote-info {
+    h2 {
+        margin-bottom: .5rem;
+        @include m.tablet {
+            font-size: 2.8rem;
+        }
+        @include m.desktop {
+            font-size: 3.8rem;
+        }
+        @include m.inter(v.$blanco);
+
+    }
+
+    p {
+        font-size: 1.8rem;
+    }
+}
+.promote-imagen{
+    img{
+        max-width: 40rem;
+        margin: 0 auto;
+        @include m.desktop {
+            max-width: 50rem;
+        }
+    }
+}

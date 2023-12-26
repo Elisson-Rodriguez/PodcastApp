@@ -1,0 +1,32 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.create-podcast{
+    margin: 10rem 0;
+
+    .podcast-flex{
+        display: flex;
+        flex-direction: column;
+        row-gap: 5rem;
+        @include m.desktop {
+            row-gap: 0;
+            column-gap: 5rem;
+            display: grid;
+            @include m.grid(2, 2rem);
+            align-items: center;
+        }
+    }
+}
+.podcast-imagen{
+    img{
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+}
+.podcast-flex{
+    .podcast-info{
+        h2{
+            @include m.inter(v.$primario);
+        }
+    }
+}
